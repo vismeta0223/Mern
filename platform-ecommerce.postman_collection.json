@@ -1,0 +1,871 @@
+{
+	"info": {
+		"_postman_id": "79484ffe-7118-490c-9b62-edc98b7d896e",
+		"name": "platform-ecommerce",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34825702"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gamingbuddy123pass@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}user/login",
+							"host": [
+								"{{base_url}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register a User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"John Mel Jay\",\r\n    \"lastname\": \"Silvano\",\r\n    \"email\": \"silvano@gmail.com\",\r\n    \"mobile\": \"099844899\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/all-users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"all-users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a User",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTI5NzFlZTc3NzM0MjFhODAzNTVlNyIsImlhdCI6MTcxNjcwNDYwMywiZXhwIjoxNzE2OTYzODAzfQ.srBzquJoi871HlM86WaV1W4gGG_-TSRBLtiTE-LkC4U",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/66529700e7773421a80355e4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"66529700e7773421a80355e4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/66557caa1f6ff9db55ca5672",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"66557caa1f6ff9db55ca5672"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTI5NzFlZTc3NzM0MjFhODAzNTVlNyIsImlhdCI6MTcxNjcwNjcyNiwiZXhwIjoxNzE2OTY1OTI2fQ.YAnIaOCovv2FEvP4p65cZNAjWM3ysjBCfpPb1_pl6PU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"shoko12\",\r\n    \"lastname\": \"shoko13\",\r\n    \"email\": \"shoko14@gmail.com\",\r\n    \"mobile\": \"09\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Block a User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNjg3ODUzMSwiZXhwIjoxNzE2OTY0OTMxfQ.BsQIzKmgqteGb1woaFn1_HViK0d601gfdf6tQIj1Z9I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/block/66557c711f6ff9db55ca566e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"block",
+								"66557c711f6ff9db55ca566e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Unblock a User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNjg3ODUzMSwiZXhwIjoxNzE2OTY0OTMxfQ.BsQIzKmgqteGb1woaFn1_HViK0d601gfdf6tQIj1Z9I",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/unblock/66557c711f6ff9db55ca566e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"unblock",
+								"66557c711f6ff9db55ca566e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/refresh",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"refresh"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzMzOTYxNCwiZXhwIjoxNzE3NDI2MDE0fQ.I9GG-wWNKKCe73Yl0Cw8iHh3HwkNy8ZICoSxKuCKG1E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"John Vincent\",\r\n    \"lastname\": \"Venenoso\",\r\n    \"email\": \"gamingbuddy123pass@gmail.com\",\r\n    \"mobile\": \"09984489999\",\r\n    \"password\": \"11\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/forgot-password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password link",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"gamingbuddy123pass@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/user/reset-password/c46f5a075ad3931b632a8ce5babccaf2252074e474b4d09e7beb2b602e13823f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"user",
+								"reset-password",
+								"c46f5a075ad3931b632a8ce5babccaf2252074e474b4d09e7beb2b602e13823f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create a product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzI3MTEwOCwiZXhwIjoxNzE3MzU3NTA4fQ.Wvp2BHTufqXECBHXs-SCl2wo7Ovbr7VWst9fZ9waWyw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"RX 6600XT\",\r\n    \"category\": \"Graphics Card\",\r\n    \"brand\": \"AMD\",\r\n    \"description\": \"Pork\",\r\n    \"price\": 31000,\r\n    \"quantity\": 13,\r\n    \"color\": \"White\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find a product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product/6658337e1829f5018b0bb43c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"6658337e1829f5018b0bb43c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Display all product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/product?page=3&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update a product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzI3MTEwOCwiZXhwIjoxNzE3MzU3NTA4fQ.Wvp2BHTufqXECBHXs-SCl2wo7Ovbr7VWst9fZ9waWyw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"GTX 1660 Super\",\r\n    \"description\": \"Beef\",\r\n    \"price\": 16000,\r\n    \"category\": \"Graphics Card\",\r\n    \"brand\": \"Nvidia\",\r\n    \"quantity\": 3,\r\n    \"color\": \"Black and red\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/product/665c47970203bc07b5eda696",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"product",
+								"665c47970203bc07b5eda696"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzI3MTEwOCwiZXhwIjoxNzE3MzU3NTA4fQ.Wvp2BHTufqXECBHXs-SCl2wo7Ovbr7VWst9fZ9waWyw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}product/665b7ab4090793bbda6b6d67",
+							"host": [
+								"{{base_url}}product"
+							],
+							"path": [
+								"665b7ab4090793bbda6b6d67"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Blog",
+			"item": [
+				{
+					"name": "Create a blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzYxMjI0NiwiZXhwIjoxNzE3Njk4NjQ2fQ.PN60sIqeLW5QGa7PfnHrzB4QCPDIbQvklmKkV4WI4kk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"1 blog\",\r\n    \"category\": \"1\",\r\n    \"description\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}blog/",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY0NTI3MywiZXhwIjoxNzE3NzMxNjczfQ.uLS2dI4dhrKNE2mFH9ZnWfZFnBhaRnXuG9zs5RzeERU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"my third blog updated\",\r\n    \"category\": \"Buhok ni Silvano updated to burst fade\",\r\n    \"description\": \"Kulot ka bhie bhie tok\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}blog/6660b4fed717907af7a39529",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								"6660b4fed717907af7a39529"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find Blog",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}blog/66619030dd1c1dcd6bf9ad21",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								"66619030dd1c1dcd6bf9ad21"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all blogs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}blog/",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY0NTI3MywiZXhwIjoxNzE3NzMxNjczfQ.uLS2dI4dhrKNE2mFH9ZnWfZFnBhaRnXuG9zs5RzeERU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}blog/6660b4fed717907af7a39529",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								"6660b4fed717907af7a39529"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Like a blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY2MjUyNCwiZXhwIjoxNzE3NzQ4OTI0fQ.wFr-V7E_52fXOmgKR0TLFiRJC422TjJyWpTJFOEJ0Jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blogId\":\"66619030dd1c1dcd6bf9ad21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}blog/likes",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Dislike a blog",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY2MjUyNCwiZXhwIjoxNzE3NzQ4OTI0fQ.wFr-V7E_52fXOmgKR0TLFiRJC422TjJyWpTJFOEJ0Jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"blogId\":\"66619030dd1c1dcd6bf9ad21\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}blog/dislikes",
+							"host": [
+								"{{base_url}}blog"
+							],
+							"path": [
+								"dislikes"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY2MjUyNCwiZXhwIjoxNzE3NzQ4OTI0fQ.wFr-V7E_52fXOmgKR0TLFiRJC422TjJyWpTJFOEJ0Jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"MONITOR\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}category",
+							"host": [
+								"{{base_url}}category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2NTU3YzcxMWY2ZmY5ZGI1NWNhNTY2ZSIsImlhdCI6MTcxNzY2MjUyNCwiZXhwIjoxNzE3NzQ4OTI0fQ.wFr-V7E_52fXOmgKR0TLFiRJC422TjJyWpTJFOEJ0Jc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Monitor\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}category/66619a44764308e9b28e17e4",
+							"host": [
+								"{{base_url}}category"
+							],
+							"path": [
+								"66619a44764308e9b28e17e4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
